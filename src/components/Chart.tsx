@@ -1,15 +1,23 @@
 "use client";
-import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
+
+import dynamic from "next/dynamic";
+const RealTimeChartNoSSR = dynamic(
+  () =>
+    import("react-ts-tradingview-widgets").then((w) => w.AdvancedRealTimeChart),
+  {
+    ssr: false,
+  }
+);
 
 export const Chart = () => {
   return (
     <div className="col-span-7 h-[40rem]">
-      <AdvancedRealTimeChart
-        theme="dark"
+      <RealTimeChartNoSSR
         symbol="BTCUSD"
+        theme="dark"
         autosize
-        height={"1000"}
-      ></AdvancedRealTimeChart>
+        height={"100"}
+      ></RealTimeChartNoSSR>
     </div>
   );
 };
