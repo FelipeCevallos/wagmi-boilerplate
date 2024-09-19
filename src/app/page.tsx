@@ -1,6 +1,6 @@
 "use client";
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
-import { Chart } from "@/components/chart";
+import { Chart } from "@/components/Chart";
 
 export default function Home() {
   return (
