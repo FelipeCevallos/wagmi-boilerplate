@@ -11,7 +11,7 @@ const RealTimeChartNoSSR = dynamic(
 
 export const Chart = () => {
   return (
-    <div className="col-span-7 h-[40rem]">
+    <div className="col-span-9 h-[40rem] m-4">
       <RealTimeChartNoSSR
         symbol="BTCUSD"
         theme="dark"
